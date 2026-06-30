@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>F.I.L.E. Setup & User Guide</title>
+    <style>
+      body {
+        font-family: "MS Sans Serif", Geneva, sans-serif;
+        background-color: #d4d0c8;
+        color: #000000;
+        margin: 20px;
+        padding: 0;
+      }
+      .container {
+        max-width: 650px;
+        margin: auto;
+        background: #d4d0c8;
+        border: 2px solid #ffffff;
+        box-shadow: 1px 1px 0px #000000;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 18px;
+        border-bottom: 2px solid #808080;
+        padding-bottom: 5px;
+        margin-top: 0;
+      }
+      h2 {
+        font-size: 14px;
+        margin-top: 20px;
+      }
+      ol,
+      ul {
+        padding-left: 20px;
+        font-size: 13px;
+        line-height: 1.6;
+      }
+      .code-box {
+        background: #ffffff;
+        border: 2px solid #808080;
+        padding: 10px;
+        font-family:
+          Courier New,
+          monospace;
+        font-size: 12px;
+        margin: 10px 0;
+      }
+      .note {
+        border: 1px dashed #000000;
+        padding: 10px;
+        background-color: #ffffe1;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>File Intelligence and Local Engine (F.I.L.E.)</h1>
+      <p style="font-size: 13px">
+        Follow these instructions to set up and run the application safely on
+        Windows.
+      </p>
+
+      <h2>1. Requirements</h2>
+      <ul>
+        <li>Windows Operating System</li>
+        <li>Python 3.x installed (with Tkinter included by default)</li>
+      </ul>
+
+      <h2>2. Setup Instructions</h2>
+      <ol>
+        <li>
+          Save your Python script exactly as
+          <strong>organiser.py</strong> inside your preferred working directory.
+        </li>
+        <li>
+          If you have an icon file, place your <strong>.ico</strong> file in the
+          same folder.
+        </li>
+      </ol>
+
+      <h2>3. How to Run the Application</h2>
+      <ol>
+        <li>
+          Open <strong>Command Prompt</strong> or <strong>PowerShell</strong>.
+        </li>
+        <li>
+          Navigate to the folder where your script is stored using the
+          <code>cd</code> command:
+          <div class="code-box">cd "D:\F.I.L.E"</div>
+        </li>
+        <li>
+          Launch the program by running:
+          <div class="code-box">python organiser.py</div>
+        </li>
+      </ol>
+
+      <h2>4. How to Use F.I.L.E.</h2>
+      <ol>
+        <li>
+          Click the <strong>Browse...</strong> button on the application
+          interface.
+        </li>
+        <li>
+          Select the directory you wish to clear up (e.g., your Downloads
+          folder).
+        </li>
+        <li>
+          Click <strong>Organize Folder</strong> to execute the sorting
+          algorithm.
+        </li>
+      </ol>
+
+      <div class="note">
+        <strong>Security Check:</strong> This application relies strictly on
+        standard Windows environment libraries (os, shutil, tkinter). It does
+        not require internet access, third-party registry changes, or elevated
+        administrative privileges to operate.
+      </div>
+    </div>
+  </body>
+</html>
