@@ -52,23 +52,66 @@ def organize_folder():
         messagebox.showerror("Error", f"An error occurred: {str(e)}")
 
 root = tk.Tk()
-root.title("File Organizer")
-root.geometry("450x150")
+root.title("F.I.L.E")
+root.geometry("450x190")
 root.resizable(False, False)
+root.configure(bg="#D4D0C8")
 
-label = tk.Label(root, text="Select the folder you want to organize:", font=("Arial", 10))
-label.pack(pady=10)
+header_label = tk.Label(
+    root, 
+    text="File Intelligence and Local Engine", 
+    font=("MS Sans Serif", 11, "bold"), 
+    bg="#D4D0C8", 
+    fg="#000000"
+)
+header_label.pack(pady=(12, 2))
 
-frame = tk.Frame(root)
+label = tk.Label(
+    root, 
+    text="Select the folder you want to organize:", 
+    font=("MS Sans Serif", 10), 
+    bg="#D4D0C8", 
+    fg="#000000"
+)
+label.pack(pady=(2, 10))
+
+frame = tk.Frame(root, bg="#D4D0C8")
 frame.pack(pady=5, fill='x', padx=20)
 
-path_entry = tk.Entry(frame, width=40)
+path_entry = tk.Entry(
+    frame, 
+    width=40, 
+    font=("MS Sans Serif", 9), 
+    bd=2, 
+    relief="sunken"
+)
 path_entry.pack(side=tk.LEFT, padx=5, expand=True, fill='x')
 
-browse_btn = tk.Button(frame, text="Browse", command=browse_folder)
+browse_btn = tk.Button(
+    frame, 
+    text="Browse...", 
+    command=browse_folder, 
+    font=("MS Sans Serif", 9), 
+    bg="#D4D0C8", 
+    fg="#000000", 
+    bd=2, 
+    relief="raised", 
+    activebackground="#D4D0C8"
+)
 browse_btn.pack(side=tk.RIGHT, padx=5)
 
-organize_btn = tk.Button(root, text="Organize Folder", bg="#4CAF50", fg="white", font=("Arial", 10, "bold"), command=organize_folder)
+organize_btn = tk.Button(
+    root, 
+    text="Organize Folder", 
+    command=organize_folder, 
+    font=("MS Sans Serif", 10, "bold"), 
+    bg="#D4D0C8", 
+    fg="#000000", 
+    bd=3, 
+    relief="raised", 
+    activebackground="#D4D0C8", 
+    padx=10
+)
 organize_btn.pack(pady=15)
 
 root.mainloop()
