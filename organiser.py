@@ -52,6 +52,7 @@ def organize_folder():
         messagebox.showerror("Error", f"An error occurred: {str(e)}")
 
 root = tk.Tk()
+root.iconbitmap("assets/app_icon.ico")
 root.title("F.I.L.E")
 root.geometry("450x190")
 root.resizable(False, False)
