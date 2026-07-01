@@ -1,11 +1,11 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
 *.so
 
 build/
 dist/
+*.spec
 *.egg-info/
 .eggs/
 
@@ -21,7 +21,6 @@ pip-delete-this-directory.txt
 .coverage
 .coverage.*
 htmlcov/
-
 .mypy_cache/
 .pyre/
 .ruff_cache/
@@ -34,15 +33,9 @@ Thumbs.db
 desktop.ini
 
 *.log
-
 .env
 .env.*
 
 *.tmp
 *.temp
-
 *.bak
-
-build/
-dist/
-*.spec
