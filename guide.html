@@ -2,121 +2,209 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>F.I.L.E. Setup & User Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F.I.L.E. | User Guide</title>
+
+    <link rel="icon" type="image/x-icon" href="/assets/256.png" />
+
     <style>
-      body {
-        font-family: "MS Sans Serif", Geneva, sans-serif;
-        background-color: #d4d0c8;
-        color: #000000;
-        margin: 20px;
+      * {
+        margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
-      .container {
-        max-width: 650px;
-        margin: auto;
+
+      body {
+        font:
+          13px "MS Sans Serif",
+          Tahoma,
+          Geneva,
+          sans-serif;
         background: #d4d0c8;
-        border: 2px solid #ffffff;
-        box-shadow: 1px 1px 0px #000000;
+        color: #000;
         padding: 20px;
       }
-      h1 {
-        font-size: 18px;
-        border-bottom: 2px solid #808080;
-        padding-bottom: 5px;
-        margin-top: 0;
+
+      .container {
+        max-width: 680px;
+        margin: auto;
+        background: #d4d0c8;
+        border: 2px solid;
+        border-color: #fff #808080 #808080 #fff;
+        padding: 20px;
       }
-      h2 {
-        font-size: 14px;
+
+      h1 {
+        font-size: 20px;
+        margin-bottom: 2px;
+      }
+
+      .subtitle {
+        color: #444;
+        margin-bottom: 18px;
+      }
+
+      section {
         margin-top: 20px;
       }
-      ol,
-      ul {
-        padding-left: 20px;
-        font-size: 13px;
+
+      h2 {
+        font-size: 14px;
+        border-bottom: 1px solid #808080;
+        padding-bottom: 4px;
+        margin-bottom: 8px;
+      }
+
+      p {
         line-height: 1.6;
       }
-      .code-box {
-        background: #ffffff;
-        border: 2px solid #808080;
-        padding: 10px;
-        font-family:
-          Courier New,
-          monospace;
-        font-size: 12px;
-        margin: 10px 0;
+
+      ul,
+      ol {
+        padding-left: 20px;
+        line-height: 1.7;
       }
+
+      code {
+        background: #fff;
+        border: 1px solid #999;
+        padding: 1px 4px;
+        font-family: "Courier New", monospace;
+      }
+
       .note {
-        border: 1px dashed #000000;
-        padding: 10px;
-        background-color: #ffffe1;
+        margin-top: 20px;
+        padding: 12px;
+        background: #ffffe1;
+        border: 1px solid #808080;
+        line-height: 1.6;
+      }
+
+      footer {
+        margin-top: 28px;
+        padding-top: 12px;
+        border-top: 1px solid #808080;
+        text-align: center;
         font-size: 12px;
+        color: #333;
+      }
+
+      a {
+        color: #003399;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>File Intelligence and Local Engine (F.I.L.E.)</h1>
-      <p style="font-size: 13px">
-        Follow these instructions to set up and run the application safely on
-        Windows.
-      </p>
+      <h1>F.I.L.E.</h1>
+      <p class="subtitle">File Intelligence &amp; Local Engine</p>
 
-      <h2>1. Requirements</h2>
-      <ul>
-        <li>Windows Operating System</li>
-        <li>Python 3.x installed (with Tkinter included by default)</li>
-      </ul>
+      <section>
+        <h2>Overview</h2>
 
-      <h2>2. Setup Instructions</h2>
-      <ol>
-        <li>
-          Save your Python script exactly as
-          <strong>organiser.py</strong> inside your preferred working directory.
-        </li>
-        <li>
-          If you have an icon file, place your <strong>.ico</strong> file in the
-          same folder.
-        </li>
-      </ol>
+        <p>
+          <strong>F.I.L.E.</strong> is a lightweight desktop utility that
+          automatically organizes files into category folders based on their
+          file extensions. Designed for speed and simplicity, it helps clean
+          cluttered folders such as <strong>Downloads</strong> without requiring
+          an internet connection, administrator privileges, or third-party
+          dependencies.
+        </p>
+      </section>
 
-      <h2>3. How to Run the Application</h2>
-      <ol>
-        <li>
-          Open <strong>Command Prompt</strong> or <strong>PowerShell</strong>.
-        </li>
-        <li>
-          Navigate to the folder where your script is stored using the
-          <code>cd</code> command:
-          <div class="code-box">cd "D:\F.I.L.E"</div>
-        </li>
-        <li>
-          Launch the program by running:
-          <div class="code-box">python organiser.py</div>
-        </li>
-      </ol>
+      <section>
+        <h2>Features</h2>
 
-      <h2>4. How to Use F.I.L.E.</h2>
-      <ol>
-        <li>
-          Click the <strong>Browse...</strong> button on the application
-          interface.
-        </li>
-        <li>
-          Select the directory you wish to clear up (e.g., your Downloads
-          folder).
-        </li>
-        <li>
-          Click <strong>Organize Folder</strong> to execute the sorting
-          algorithm.
-        </li>
-      </ol>
+        <ul>
+          <li>Lightweight and fast.</li>
+          <li>Runs completely offline.</li>
+          <li>Uses only built-in Python libraries.</li>
+          <li>Automatically creates destination folders.</li>
+          <li>Organizes files by extension.</li>
+          <li>Simple Windows desktop interface.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>How It Works</h2>
+
+        <ul>
+          <li>
+            <strong>Scan</strong> — Reads files from the selected directory
+            while ignoring existing folders.
+          </li>
+
+          <li>
+            <strong>Detect</strong> — Identifies each file's extension (for
+            example <code>.pdf</code> or <code>.mp4</code>).
+          </li>
+
+          <li>
+            <strong>Categorize</strong> — Matches the extension against
+            F.I.L.E.'s internal category database.
+          </li>
+
+          <li>
+            <strong>Organize</strong> — Creates category folders if necessary
+            and safely moves each file to its destination.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Requirements</h2>
+
+        <ul>
+          <li>Microsoft Windows</li>
+          <li>Python 3.x</li>
+          <li>Tkinter (included with standard Python installations)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Quick Start</h2>
+
+        <ol>
+          <li>Launch the application.</li>
+
+          <li>Click <strong>Browse...</strong>.</li>
+
+          <li>Select the folder you want to organize.</li>
+
+          <li>Click <strong>Organize Folder</strong>.</li>
+
+          <li>
+            F.I.L.E. will automatically sort supported files into their
+            respective folders.
+          </li>
+        </ol>
+      </section>
 
       <div class="note">
-        <strong>Security Check:</strong> This application relies strictly on
-        standard Windows environment libraries (os, shutil, tkinter). It does
-        not require internet access, third-party registry changes, or elevated
-        administrative privileges to operate.
+        <strong>Safety</strong><br /><br />
+
+        F.I.L.E. runs entirely on your computer using Python's built-in
+        <code>os</code>, <code>shutil</code>, and
+        <code>tkinter</code> libraries. It does not require an internet
+        connection, modify the Windows Registry, or request administrator
+        privileges.
       </div>
+
+      <footer>
+        <p><strong>F.I.L.E.</strong> — File Intelligence &amp; Local Engine</p>
+        <br />
+        <p>
+          Developed by
+          <a href="https://github.com/mdhzarif03" target="_blank">
+            Muhammad Hasan Zarif (@mdhzarif03)
+          </a>
+        </p>
+      </footer>
     </div>
   </body>
 </html>
