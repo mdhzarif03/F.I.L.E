@@ -33,7 +33,6 @@ htmlcov/
 Thumbs.db
 desktop.ini
 
-# Logs
 *.log
 
 .env
